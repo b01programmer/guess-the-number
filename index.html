@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Guessing Game</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="score-board__cont fade">
+    <div class="score-board">
+      <div class="score-board__win">Total win: <span class="score-board__win-score">0</span></div>
+      <br>
+      <div style="background-color: #555; padding: inherit;border-radius: inherit;">
+        <div class="score-board__lose">Total Loose: <span class="score-board__lose-score">0</span></div>
+        <div class="score-board__match">Total Match Played: <span class="score-board__match-total">0</span></div>
+      </div>
+      <br>
+      <div class="center-text">
+        <button onclick="document.querySelector('.score-board__cont').classList.add('fade')"
+          class="btn btn-close">Close</button>
+      </div>
+    </div>
+  </div>
+  <main>
+    <form action="">
+      <div class="game-cont">
+        <div>
+          <textarea readonly class="show-number" name="" id="" cols="3" rows="1" disabled></textarea>
+        </div>
+        <div>
+          <input class="input-guess" type="number" placeholder="Guess between 0,10">
+        </div>
+        <div>
+          <input type="submit" value="Guessed" class="btn-submit-guess"></input>
+          <button class="btn btn-score-board">Score
+            Board</button>
+        </div>
+
+      </div>
+      <div class="again-window fade">
+        <button onclick="initializer()" class="btn btn-play-again">Play Again</button>
+      </div>
+    </form>
+    <div class="messages"></div>
+  </main>
+
+
+  <!-- Project -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
